@@ -1,0 +1,13 @@
+@mixin text ($font-size, $font-weight, $color, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    line-height: $line-height;
+}
+@mixin shapes ($width, $height, $b-r, $noborder) {
+    width: $width;
+    height: $height;
+    border-radius: $b-r;
+    border: $noborder;
+}
+    
