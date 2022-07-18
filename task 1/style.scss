@@ -229,16 +229,16 @@ h2 {
     
         .projects_all{
             margin-top: 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            grid-template-areas: 
-            "project1 project2"
-            "project3 project4"
-            "project5 project6"
-            "project7 project8"
-            "project8 ."
-            ;
+            display: flex;
+            // grid-template-columns: 1fr 1fr;
+            // gap: 20px;
+            // grid-template-areas:
+            // "project1 project2"
+            // "project3 project4"
+            // "project5 project6"
+            // "project7 project8"
+            // "project8 ."
+            // ;
 
             .project_1{
                 grid-area: project1;
@@ -250,6 +250,17 @@ h2 {
                 justify-content: flex-end;
                 align-items: center;
                 margin-left: 24px;
+                z-index: 10;
+                
+                &::before{
+                    // position: absolute;
+                    content: "";
+                    display: inline-block;
+                    @include shapes (580px, 118px, 8px, none);
+                    background: blue;
+                    margin-right: 580px;
+                    z-index: 1;
+                }
 
                 .project_inside{
                     width: 532px;

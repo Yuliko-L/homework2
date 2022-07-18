@@ -228,10 +228,7 @@ h2 {
 }
 .projects_content .projects_all {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  grid-template-areas: "project1 project2" "project3 project4" "project5 project6" "project7 project8" "project8 .";
+  display: flex;
 }
 .projects_content .projects_all .project_1, .projects_content .projects_all .project_3, .projects_content .projects_all .project_2 {
   grid-area: project1;
@@ -246,6 +243,18 @@ h2 {
   justify-content: flex-end;
   align-items: center;
   margin-left: 24px;
+  z-index: 10;
+}
+.projects_content .projects_all .project_1::before, .projects_content .projects_all .project_3::before, .projects_content .projects_all .project_2::before {
+  content: "";
+  display: inline-block;
+  width: 580px;
+  height: 118px;
+  border-radius: 8px;
+  border: none;
+  background: blue;
+  margin-right: 580px;
+  z-index: 1;
 }
 .projects_content .projects_all .project_1 .project_inside, .projects_content .projects_all .project_3 .project_inside, .projects_content .projects_all .project_2 .project_inside {
   width: 532px;
